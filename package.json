@@ -1,0 +1,27 @@
+{
+  "name": "document",
+  "version": "1.0.0",
+  "description": "Document template",
+  "author": "Ihor Zuikov",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlhint": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-watch": "^5.0.1",
+    "mqpacker": "^7.0.0",
+    "postcss-cli": "^7.1.0",
+    "sort-css-media-queries": "^1.5.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11"
+  ]
+}

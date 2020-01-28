@@ -1,0 +1,36 @@
+.search {
+    padding: 8px 12px 8px 8px;
+    @include flex-centered;
+    box-shadow: 0 0 0 1px #aaa;
+    border-radius: 4px;
+
+    &__btn {
+        margin: 0 8px 0 0;
+        padding: 0;
+        outline: 0;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: $color_text;
+        vertical-align: top;
+    }
+
+    &__input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        display: block;
+        width: 172px;
+        height: 16px;
+        color: $color_text;
+        font-family: $font_open_sans;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,11 @@
+- var navIcon = ["#upload-document", "#pdffiller", "#sign-now", "#dropbox", "#google-drive", "#one-drive", "#box", "#office-365", "#sharepoint"];
+
+nav.main-nav
+    ul.main-nav__list
+        each id in navIcon
+            li.main-nav__item
+                a.main-nav__link(href="#")
+                    svg.main-nav__icon
+                        use(xlink:href=id)
+                    svg.main-nav__icon
+                        use(xlink:href=id+"-colored")

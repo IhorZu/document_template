@@ -1,0 +1,48 @@
+.section-top {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 0 0 #dadada;
+
+    &__user-data {
+        flex: 1;
+    }
+
+    &__user-name {
+        color: $color_text;
+        font-size: 14px;
+        line-height: 1.14;
+        font-weight: 700;
+    }
+
+    &__user-email {
+        color: $color_dark_blue;
+        font-size: 12px;
+        line-height: 1.33;
+    }
+
+    &__form-wrap {
+        margin: 0 20px;
+    }
+
+    &__logout-wrap {
+        margin-right: 8px;
+    }
+
+    &__logout-link {
+        width: 16px;
+        height: 16px;
+        @include flex-centered;
+    }
+
+    &__logout-icon {
+        width: 16px;
+        height: 16px;
+        fill: $color_text;
+        transition: fill .15s;
+    }
+}
+
+.section-content {
+    padding: 12px 20px;
+}

@@ -1,0 +1,103 @@
+.table {
+    user-select: none;
+
+    &__row,
+    &__row-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__row-header {
+        height: 32px;
+        box-shadow: inset 0 -1px 0 0 #e9e9e9, inset 0 1px 0 0 #e9e9e9;
+        background-color: #f9f9f9;
+    }
+
+    &__row {
+        height: 56px;
+        box-shadow: inset 0 -1px 0 0 #e9e9e9;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff9f2;
+        }
+    }
+
+    &__col,
+    &__col-header {
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-right: 16px;
+        }
+
+        &:nth-child(1) {
+            flex: 1;
+        }
+
+        &:nth-child(2) {
+            width: 100%;
+            max-width: 90px;
+        }
+
+        &:nth-child(3) {
+            width: 100%;
+            max-width: 93px;
+        }
+    }
+
+    &__col-header {
+        color: $color_text;
+        font-size: 12px;
+        line-height: 2.67;
+        font-weight: 600;
+    }
+
+    &__col {
+        color: $color_text;
+        font-size: 14px;
+        line-height: 1.14;
+        overflow: hidden;
+
+        .table__row:hover & {
+            font-weight: 700;
+        }
+    }
+
+    &__col-data {
+        @include ellipsis;
+
+        .table__row:hover .table__col:nth-child(3) & {
+            display: none;
+        }
+    }
+
+    &__sort-link {
+        color: inherit;
+    }
+
+    &__sort-icon {
+        margin-left: 4px;
+        width: 8px;
+        height: 8px;
+        fill: $color_text;
+    }
+
+    &__data-icon {
+        margin-right: 8px;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        fill: $color_text_alt;
+    }
+
+    &__import-btn {
+        display: none;
+
+        .table__row:hover & {
+            display: inline-block;
+        }
+    }
+}

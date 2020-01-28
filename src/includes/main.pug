@@ -1,0 +1,78 @@
+- var breadcrumbs = [{name:"Folder 2", icon:"#folder", link:"#"}, {name:"Folder 1", icon:"#folder", link:"#"}, {name:"PDFfiller Main", icon:"#home", link:"#"}];
+- var folderData = [{name:"Company Policy", size: "2MB", date: "Nov 07, 2017"}];
+- var fileData = [{name:"online w9 2017-2018 form", size: "2MB", date: "Nov 07, 2017"}, {name:"ds 82 2017-2018 form", size: "2MB", date: "Nov 07, 2017"}, {name:"online w9 2017-2018 form", size: "2MB", date: "Nov 07, 2017"}];
+
+main.main
+    .section-top
+        .section-top__user-data
+            .section-top__user-name Wade Wilson
+            a.section-top__user-email(href="mailto:wadewilson@domain.com") wadewilson@domain.com
+        .section-top__form-wrap
+            form(
+                action="/",
+                method="GET"
+            )
+                .search
+                    button.search__btn
+                        svg.search__icon
+                            use(xlink:href="#search")
+                    input.search__input(
+                        type="search",
+                        name="search",
+                        placeholder="Search"
+                        class="input"
+                    )
+        .section-top__logout-wrap
+            a.section-top__logout-link(href="#")
+                svg.section-top__logout-icon
+                    use(xlink:href="#logout")
+    .section-content
+        .breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    button.breadcrumbs__btn
+                        svg.breadcrumbs__btn-icon
+                            use(xlink:href="#folder-with-chevron")
+                    ul.breadcrumbs__dropdown-list
+                        each path in breadcrumbs
+                            li.breadcrumbs__dropdown-item
+                                a.breadcrumbs__dropdown-link(href=path.link)
+                                    svg.breadcrumbs__dropdown-icon
+                                        use(xlink:href=path.icon)
+                                    | #{path.name}
+                li.breadcrumbs__item
+                    svg.breadcrumbs__separator
+                        use(xlink:href="#chevron-forward-single")
+                    span.breadcrumbs__title Company documents
+        .table(role="grid")
+            .table__row-header(role="row")
+                .table__col-header(role="columnheader")
+                    a.table__sort-link(href="#") Name
+                        svg.table__sort-icon
+                            use(xlink:href="#arrow-alt-down")
+                .table__col-header(role="columnheader") Size
+                .table__col-header(role="columnheader") Date
+            .table_body(role="rowgroup")
+                for folder in folderData
+                    .table__row(role="row")
+                        .table__col(role="gridcell")
+                            svg.table__data-icon
+                                use(xlink:href="#folder-colored")
+                            span.table__col-data #{folder.name}
+                        .table__col(role="gridcell")
+                            span.table__col-data #{folder.size}
+                        .table__col(role="gridcell")
+                            span.table__col-data #{folder.date}
+                            btn.btn.table__import-btn Import
+                for file in fileData
+                    .table__row(role="row")
+                        .table__col(role="gridcell")
+                            svg.table__data-icon
+                                use(xlink:href="#document-solid")
+                            span.table__col-data #{file.name}
+                        .table__col(role="gridcell")
+                            span.table__col-data #{file.size}
+                        .table__col(role="gridcell")
+                            span.table__col-data #{file.date}
+                            btn.btn.table__import-btn Import
+

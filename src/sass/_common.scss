@@ -1,0 +1,20 @@
+[hidden] {
+    display: none;
+}
+
+::placeholder {
+    color: #959595;
+}
+
+body {
+    min-width: 580px;
+    height: 100%;
+    font-family: $font_open_sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.main {
+    margin-left: 72px;
+}
